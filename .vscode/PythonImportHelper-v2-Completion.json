@@ -1,0 +1,287 @@
+[
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "keras",
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "isExtraImport": true,
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "keras",
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "isExtraImport": true,
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "hparams",
+        "description": "hparams",
+        "isExtraImport": true,
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "hparams",
+        "description": "hparams",
+        "isExtraImport": true,
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "keras.backend",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "keras.backend",
+        "description": "keras.backend",
+        "detail": "keras.backend",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "load_img",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "keras.metrics",
+        "description": "keras.metrics",
+        "isExtraImport": true,
+        "detail": "keras.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "JaccardLoss",
+        "importPath": "loss_functions",
+        "description": "loss_functions",
+        "isExtraImport": true,
+        "detail": "loss_functions",
+        "documentation": {}
+    },
+    {
+        "label": "outputs_folder",
+        "kind": 5,
+        "importPath": "hparams",
+        "description": "hparams",
+        "peekOfCode": "outputs_folder = \"./\"\n# Define the batch size and image dimensions\nBATCH_SIZE = 64\nIMAGE_HEIGHT = 256\nIMAGE_WIDTH = 256\nIMAGE_SIZE = (IMAGE_HEIGHT, IMAGE_WIDTH)\nSEED=5005",
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "hparams",
+        "description": "hparams",
+        "peekOfCode": "BATCH_SIZE = 64\nIMAGE_HEIGHT = 256\nIMAGE_WIDTH = 256\nIMAGE_SIZE = (IMAGE_HEIGHT, IMAGE_WIDTH)\nSEED=5005",
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_HEIGHT",
+        "kind": 5,
+        "importPath": "hparams",
+        "description": "hparams",
+        "peekOfCode": "IMAGE_HEIGHT = 256\nIMAGE_WIDTH = 256\nIMAGE_SIZE = (IMAGE_HEIGHT, IMAGE_WIDTH)\nSEED=5005",
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_WIDTH",
+        "kind": 5,
+        "importPath": "hparams",
+        "description": "hparams",
+        "peekOfCode": "IMAGE_WIDTH = 256\nIMAGE_SIZE = (IMAGE_HEIGHT, IMAGE_WIDTH)\nSEED=5005",
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_SIZE",
+        "kind": 5,
+        "importPath": "hparams",
+        "description": "hparams",
+        "peekOfCode": "IMAGE_SIZE = (IMAGE_HEIGHT, IMAGE_WIDTH)\nSEED=5005",
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "model = get_model(\"lips_model_ep_2.h5\")\n# Open the camera\ncap = cv2.VideoCapture(0)\n# Check if the webcam is opened correctly\nif not cap.isOpened():\n    raise IOError(\"Cannot open webcam\")\n# used to record the time when we processed last frame \nprev_frame_time = 0\n# used to record the time at which we processed current frame \nnew_frame_time = 0",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\n# Check if the webcam is opened correctly\nif not cap.isOpened():\n    raise IOError(\"Cannot open webcam\")\n# used to record the time when we processed last frame \nprev_frame_time = 0\n# used to record the time at which we processed current frame \nnew_frame_time = 0\nwhile (True): \n    ret, frame = cap.read()",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "prev_frame_time",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "prev_frame_time = 0\n# used to record the time at which we processed current frame \nnew_frame_time = 0\nwhile (True): \n    ret, frame = cap.read()\n    # Convert the image to PIL format\n    image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "new_frame_time",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "new_frame_time = 0\nwhile (True): \n    ret, frame = cap.read()\n    # Convert the image to PIL format\n    image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)\n    predict_masks = model.predict(image)\n    # Apply the mask to the original frame",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "JaccardLoss",
+        "kind": 2,
+        "importPath": "loss_functions",
+        "description": "loss_functions",
+        "peekOfCode": "def JaccardLoss(targets, inputs, smooth=1e-6):\n    # Convert targets to float32 data type\n    targets = keras_be.cast(targets, dtype='float32')\n    # Flatten label and prediction tensors\n    inputs = keras_be.flatten(inputs)\n    targets = keras_be.flatten(targets)\n    # Reshape flattened tensors to rank-2 matrices\n    inputs = keras_be.reshape(inputs, (-1, 1))\n    targets = keras_be.reshape(targets, (-1, 1))\n    # Calculate intersection and union using dot product",
+        "detail": "loss_functions",
+        "documentation": {}
+    },
+    {
+        "label": "PreprocessingBlock",
+        "kind": 6,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "class PreprocessingBlock(Layer):\n    def __init__(self, image_size=IMAGE_SIZE, scale=1./255):\n        super().__init__()\n        self.resize = Resizing(IMAGE_SIZE[0], IMAGE_SIZE[1])\n        self.rescale = Rescaling(scale=1./255)\n    def call(self, x):\n        x = self.resize(x)\n        x = self.rescale(x)\n        return x\nclass AugmentationBlock(Layer):",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "AugmentationBlock",
+        "kind": 6,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "class AugmentationBlock(Layer):\n    def __init__(self, seed=None, flip_mode=\"horizontal\", rotation_factor=0.1):\n        super().__init__()\n        self.flip = RandomFlip(mode=flip_mode, seed=seed)\n        self.rotate = RandomRotation(factor=rotation_factor, fill_mode='nearest', seed=seed)\n    def call(self, x):\n        x = self.flip(x)\n        x = self.rotate(x)\n        return x\nclass ConvBlock(Layer):",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "ConvBlock",
+        "kind": 6,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "class ConvBlock(Layer):\n        def __init__(self, filters, kernel_size, strides=1, padding='same', drop_out_rate=0.1, pool=False):\n            super().__init__()\n            self.conv = Conv2D(filters=filters, kernel_size=kernel_size, strides=strides, padding=padding, kernel_initializer='he_normal')\n            self.dropout = Dropout(drop_out_rate)\n            self.norm = BatchNormalization()\n            self.relu = LeakyReLU(0.1)\n        def call(self, x):\n            x = self.conv(x)\n            x = self.norm(x)",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "UpConvBlock",
+        "kind": 6,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "class UpConvBlock(Layer):\n    def __init__(self, filters, kernel_size, strides=2, padding='same', drop_out_rate=0.1, use_attention=False):\n            super().__init__()\n            self.tconv = Conv2DTranspose(filters=filters, kernel_size=kernel_size, strides=strides, padding=padding, kernel_initializer='he_normal')\n            self.dropout = Dropout(drop_out_rate)\n            self.norm = BatchNormalization()\n            self.relu = ReLU()\n            self.concat = Concatenate(axis=3)\n            self.use_attention = use_attention\n            self.attention = AdditiveAttention()",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "kind": 2,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "def get_model(pretrain_path=None):\n    inputs = Input((None, None, 3))\n    preprocessed = PreprocessingBlock()(inputs)\n    conv1 = ConvBlock(16, 3)(preprocessed)\n    conv1 = ConvBlock(16, 3)(conv1) \n    pool1 = MaxPooling2D((2,2))(conv1)\n    conv2 = ConvBlock(32, 3)(pool1)\n    conv2 = ConvBlock(32, 3)(conv2)\n    pool2 = MaxPooling2D((2,2))(conv2)\n    conv3 = ConvBlock(64, 3)(pool2)",
+        "detail": "model",
+        "documentation": {}
+    }
+]
