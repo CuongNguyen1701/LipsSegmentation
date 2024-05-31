@@ -9,6 +9,62 @@
         "documentation": {}
     },
     {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "hparams",
+        "description": "hparams",
+        "isExtraImport": true,
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "hparams",
+        "description": "hparams",
+        "isExtraImport": true,
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "hparams",
+        "description": "hparams",
+        "isExtraImport": true,
+        "detail": "hparams",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
         "label": "cv2",
         "kind": 6,
         "isExtraImport": true,
@@ -18,11 +74,12 @@
         "documentation": {}
     },
     {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
+        "label": "time",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "PIL",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -60,36 +117,11 @@
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "hparams",
-        "description": "hparams",
+        "label": "create_colormap",
+        "importPath": "cmap",
+        "description": "cmap",
         "isExtraImport": true,
-        "detail": "hparams",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "hparams",
-        "description": "hparams",
-        "isExtraImport": true,
-        "detail": "hparams",
-        "documentation": {}
-    },
-    {
-        "label": "get_model",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
+        "detail": "cmap",
         "documentation": {}
     },
     {
@@ -103,34 +135,34 @@
     },
     {
         "label": "ImageDataGenerator",
-        "importPath": "tensorflow.keras.preprocessing.image",
-        "description": "tensorflow.keras.preprocessing.image",
+        "importPath": "keras.preprocessing.image",
+        "description": "keras.preprocessing.image",
         "isExtraImport": true,
-        "detail": "tensorflow.keras.preprocessing.image",
+        "detail": "keras.preprocessing.image",
         "documentation": {}
     },
     {
         "label": "load_img",
-        "importPath": "tensorflow.keras.preprocessing.image",
-        "description": "tensorflow.keras.preprocessing.image",
+        "importPath": "keras.preprocessing.image",
+        "description": "keras.preprocessing.image",
         "isExtraImport": true,
-        "detail": "tensorflow.keras.preprocessing.image",
+        "detail": "keras.preprocessing.image",
         "documentation": {}
     },
     {
         "label": "Model",
-        "importPath": "tensorflow.keras.models",
-        "description": "tensorflow.keras.models",
+        "importPath": "keras.models",
+        "description": "keras.models",
         "isExtraImport": true,
-        "detail": "tensorflow.keras.models",
+        "detail": "keras.models",
         "documentation": {}
     },
     {
         "label": "*",
-        "importPath": "tensorflow.keras.layers",
-        "description": "tensorflow.keras.layers",
+        "importPath": "keras.layers",
+        "description": "keras.layers",
         "isExtraImport": true,
-        "detail": "tensorflow.keras.layers",
+        "detail": "keras.layers",
         "documentation": {}
     },
     {
@@ -147,6 +179,78 @@
         "description": "loss_functions",
         "isExtraImport": true,
         "detail": "loss_functions",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "model = st.session_state[\"model\"]\nst.title(\"Webcam Live Feed\")\nrun = st.toggle(\"Run\", False)\ncolor = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "run = st.toggle(\"Run\", False)\ncolor = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "color = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "FRAME_WINDOW",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "FRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "colormap",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "colormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)\n    predict_masks = model.predict(image)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hex_to_rgb",
+        "kind": 2,
+        "importPath": "cmap",
+        "description": "cmap",
+        "peekOfCode": "def hex_to_rgb(hex_color):\n    \"\"\"Convert hex color to RGB.\"\"\"\n    hex_color = hex_color.lstrip('#')\n    return tuple(int(hex_color[i:i+2], 16) for i in (4, 2, 0))\ndef create_colormap(color1, color2):\n    \"\"\"Create a colormap for cv2.applyColorMap from two hex RGB values(BGR value).\"\"\"\n    # Convert hex to RGB\n    rgb1 = hex_to_rgb(color1)\n    rgb2 = hex_to_rgb(color2)\n    # Generate gradient",
+        "detail": "cmap",
+        "documentation": {}
+    },
+    {
+        "label": "create_colormap",
+        "kind": 2,
+        "importPath": "cmap",
+        "description": "cmap",
+        "peekOfCode": "def create_colormap(color1, color2):\n    \"\"\"Create a colormap for cv2.applyColorMap from two hex RGB values(BGR value).\"\"\"\n    # Convert hex to RGB\n    rgb1 = hex_to_rgb(color1)\n    rgb2 = hex_to_rgb(color2)\n    # Generate gradient\n    gradient = np.linspace(rgb1, rgb2, 256)\n    # Convert to uint8\n    colormap = gradient.astype(np.uint8)\n    # Reshape to 256x1x3",
+        "detail": "cmap",
         "documentation": {}
     },
     {
@@ -199,7 +303,7 @@
         "kind": 5,
         "importPath": "inference",
         "description": "inference",
-        "peekOfCode": "model = get_model(\"lips_model_ep_2.h5\")\n# Open the camera\ncap = cv2.VideoCapture(0)\n# Check if the webcam is opened correctly\nif not cap.isOpened():\n    raise IOError(\"Cannot open webcam\")\n# used to record the time when we processed last frame \nprev_frame_time = 0\n# used to record the time at which we processed current frame \nnew_frame_time = 0",
+        "peekOfCode": "model = get_model(\"lips_model_unet.h5\")\n# Open the camera\ncap = cv2.VideoCapture(0)\n# Check if the webcam is opened correctly\nif not cap.isOpened():\n    raise IOError(\"Cannot open webcam\")\n# used to record the time when we processed last frame \nprev_frame_time = 0\n# used to record the time at which we processed current frame \nnew_frame_time = 0",
         "detail": "inference",
         "documentation": {}
     },
@@ -244,16 +348,7 @@
         "kind": 6,
         "importPath": "model",
         "description": "model",
-        "peekOfCode": "class PreprocessingBlock(Layer):\n    def __init__(self, image_size=IMAGE_SIZE, scale=1./255):\n        super().__init__()\n        self.resize = Resizing(IMAGE_SIZE[0], IMAGE_SIZE[1])\n        self.rescale = Rescaling(scale=1./255)\n    def call(self, x):\n        x = self.resize(x)\n        x = self.rescale(x)\n        return x\nclass AugmentationBlock(Layer):",
-        "detail": "model",
-        "documentation": {}
-    },
-    {
-        "label": "AugmentationBlock",
-        "kind": 6,
-        "importPath": "model",
-        "description": "model",
-        "peekOfCode": "class AugmentationBlock(Layer):\n    def __init__(self, seed=None, flip_mode=\"horizontal\", rotation_factor=0.1):\n        super().__init__()\n        self.flip = RandomFlip(mode=flip_mode, seed=seed)\n        self.rotate = RandomRotation(factor=rotation_factor, fill_mode='nearest', seed=seed)\n    def call(self, x):\n        x = self.flip(x)\n        x = self.rotate(x)\n        return x\nclass ConvBlock(Layer):",
+        "peekOfCode": "class PreprocessingBlock(Layer):\n    def __init__(self, image_size=IMAGE_SIZE, scale=1./255):\n        super().__init__()\n        self.resize = Resizing(IMAGE_SIZE[0], IMAGE_SIZE[1])\n        self.rescale = Rescaling(scale=1./255)\n    def call(self, x):\n        x = self.resize(x)\n        x = self.rescale(x)\n        return x\nclass ConvBlock(Layer):",
         "detail": "model",
         "documentation": {}
     },

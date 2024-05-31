@@ -1,9 +1,9 @@
 
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.preprocessing.image import ImageDataGenerator, load_img
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import *
+from keras.preprocessing.image import ImageDataGenerator, load_img
+from keras.models import Model
+from keras.layers import *
 from keras.metrics import *
 from hparams import *
 from loss_functions import JaccardLoss
@@ -15,17 +15,6 @@ class PreprocessingBlock(Layer):
     def call(self, x):
         x = self.resize(x)
         x = self.rescale(x)
-        return x
-class AugmentationBlock(Layer):
-    def __init__(self, seed=None, flip_mode="horizontal", rotation_factor=0.1):
-        super().__init__()
-        self.flip = RandomFlip(mode=flip_mode, seed=seed)
-        self.rotate = RandomRotation(factor=rotation_factor, fill_mode='nearest', seed=seed)
-        
-    def call(self, x):
-        x = self.flip(x)
-        x = self.rotate(x)
-        
         return x
 class ConvBlock(Layer):
         def __init__(self, filters, kernel_size, strides=1, padding='same', drop_out_rate=0.1, pool=False):

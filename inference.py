@@ -6,7 +6,7 @@ from hparams import *
 from model import get_model
 import time
 
-model = get_model("lips_model_ep_2.h5")
+model = get_model("lips_model_unet.h5")
 
 # Open the camera
 cap = cv2.VideoCapture(0)
