@@ -186,7 +186,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "model = st.session_state[\"model\"]\nst.title(\"Webcam Live Feed\")\nrun = st.toggle(\"Run\", False)\ncolor = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)",
+        "peekOfCode": "model = st.session_state[\"model\"]\nst.title(\"Webcam Live Feed\")\nrun = st.toggle(\"Run\", False)\ncolor = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\n# Initialize variables for FPS calculation\nstart_time = time.time()\nframe_count = 0",
         "detail": "app",
         "documentation": {}
     },
@@ -195,7 +195,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "run = st.toggle(\"Run\", False)\ncolor = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)",
+        "peekOfCode": "run = st.toggle(\"Run\", False)\ncolor = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\n# Initialize variables for FPS calculation\nstart_time = time.time()\nframe_count = 0\nfps_text = st.text(\"FPS: \")\nwhile run:",
         "detail": "app",
         "documentation": {}
     },
@@ -204,7 +204,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "color = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)",
+        "peekOfCode": "color = st.color_picker(\"Pick A Color\", \"#FF0000\")\nFRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\n# Initialize variables for FPS calculation\nstart_time = time.time()\nframe_count = 0\nfps_text = st.text(\"FPS: \")\nwhile run:\n    ret, frame = cap.read()",
         "detail": "app",
         "documentation": {}
     },
@@ -213,7 +213,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "FRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)",
+        "peekOfCode": "FRAME_WINDOW = st.image([])\ncap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\n# Initialize variables for FPS calculation\nstart_time = time.time()\nframe_count = 0\nfps_text = st.text(\"FPS: \")\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)",
         "detail": "app",
         "documentation": {}
     },
@@ -222,7 +222,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "cap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\ncolormap = create_colormap(\"#000000\", color)\n# Initialize variables for FPS calculation\nstart_time = time.time()\nframe_count = 0\nfps_text = st.text(\"FPS: \")\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)",
         "detail": "app",
         "documentation": {}
     },
@@ -231,7 +231,34 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "colormap = create_colormap(\"#000000\", color)\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)\n    predict_masks = model.predict(image)",
+        "peekOfCode": "colormap = create_colormap(\"#000000\", color)\n# Initialize variables for FPS calculation\nstart_time = time.time()\nframe_count = 0\nfps_text = st.text(\"FPS: \")\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "start_time",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "start_time = time.time()\nframe_count = 0\nfps_text = st.text(\"FPS: \")\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "frame_count",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "frame_count = 0\nfps_text = st.text(\"FPS: \")\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "fps_text",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "fps_text = st.text(\"FPS: \")\nwhile run:\n    ret, frame = cap.read()\n    frame = cv2.flip(frame, 1)\n    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    image = Image.fromarray(rgb_frame)\n    image = image.resize(IMAGE_SIZE)\n    image = np.array(image)\n    image = tf.expand_dims(image, axis=0)\n    predict_masks = model.predict(image)",
         "detail": "app",
         "documentation": {}
     },
